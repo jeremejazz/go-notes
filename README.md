@@ -13,6 +13,8 @@ I will be including source codes and explanations as well. This is not a beginne
 ## Partial Table of Contents
 
 - [resources.md](resources.md)
+- [code-editors.md](code-editors.md)
+
 
 ### A little About Me
 <!-- put this on another page..please -->
