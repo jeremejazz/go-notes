@@ -1,8 +1,37 @@
 # A simple Fileserver
 
+We will be creating a simple static file server. This can be useful for hosting static files.
 
 
-The full code
+## The basic web server setup
+
+We'll import the packages we need for our webserver
+
+```go
+package main 
+
+import (
+    "net/http"
+    "os"
+)
+
+func main(){
+    dir,_ := os.Getwd()
+    http.ListenAndServe(":3000", http.FileServer(http.Dir(dir)))
+
+}
+```
+
+Running this code and going to http://localhost:8080 will give you the current directory listing
+
+
+## Accepting Command-line Arguments
+
+To make things flexible we can add some parameters in case we need to change the port and path.
+Go comes with a library that parses command-line parameter flags. 
+
+
+The full code: 
 
 ```go
 package main
